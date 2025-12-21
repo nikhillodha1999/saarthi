@@ -24,6 +24,32 @@
         background-color: rgba(0, 0, 0, 0.6);
       }
 
+      /* This CSS creates the "Big Quotes" effect using only the p tag */
+      .hero-quote {
+        position: relative;
+        padding: 0 40px;
+      }
+      .hero-quote::before {
+        content: "“";
+        position: absolute;
+        left: -10px;
+        top: -20px;
+        font-size: 80px;
+        color: #004225; /* Bottle Green */
+        opacity: 0.2;
+        font-family: serif;
+      }
+      .hero-quote::after {
+        content: "”";
+        position: absolute;
+        right: -10px;
+        bottom: -50px;
+        font-size: 80px;
+        color: #004225;
+        opacity: 0.2;
+        font-family: serif;
+      }
+
       /* Square Card Logic */
       .square-card {
         aspect-ratio: 1 / 1;
@@ -73,32 +99,66 @@
         right: 30px;
         z-index: 1000;
       }
+
+      /* YouTube Brand Color */
+      .bg-youtube {
+        background-color: #ff0000;
+      }
+
+      /* Container for stacking floating buttons */
+      .floating-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Space between the buttons */
+      }
     </style>
   </head>
   <body class="sage-bg font-sans text-gray-800">
-    <div class="floating-linkedin">
-      <span
-        class="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping"
-      ></span>
-      <a
-        href="https://linkedin.com/in/bhagyashreelodha"
-        target="_blank"
-        class="relative inline-flex items-center justify-center w-16 h-16 bg-[#0077b5] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300"
-      >
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-          />
-        </svg>
-      </a>
+    <div class="floating-container">
+      <div class="relative group">
+        <a
+          href="https://youtube.com/@yourhandle"
+          target="_blank"
+          class="relative inline-flex items-center justify-center w-16 h-16 bg-youtube text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300"
+        >
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping"
+        ></span>
+        <a
+          href="https://linkedin.com/in/bhagyashreelodha"
+          target="_blank"
+          class="relative inline-flex items-center justify-center w-16 h-16 bg-[#0077b5] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300"
+        >
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
 
     <nav class="bottle-green text-white p-5 sticky top-0 z-50 shadow-lg">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-widest">Bhagyashree Lodha- SAARTHI</div>
+        <div class="text-2xl font-bold tracking-widest">
+          Bhagyashree Lodha- Saarthi
+        </div>
         <div class="hidden md:flex space-x-8 font-medium">
           <a href="#about" class="hover:text-green-300 transition">About Us</a>
-          <a href="#services" class="hover:text-green-300 transition"
+          <a href="services.html" class="hover:text-green-300 transition"
             >Services</a
           >
           <a href="#footer" class="hover:text-green-300 transition"
@@ -143,16 +203,23 @@
     </header>
 
     <section id="about" class="py-24 container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-bottle-green">
+      <h2
+        class="text-4xl font-bold mb-10 text-bottle-green uppercase tracking-widest"
+      >
         Bhagyashree Lodha
       </h2>
-      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed italic">
-        Bhagyashree Lodha is a dedicated social impact strategist and the
-        driving force behind Saarthi. With a mission to simplify fundraising and
-        corporate social responsibility, she provides actionable insights that
-        bridge the gap between intent and impact. Her approach combines
-        professional rigor with a deep-rooted commitment to community
-        upliftment.
+
+      <p
+        class="hero-quote text-xl md:text-2xl text-gray-700 max-w-8xl mx-auto leading-relaxed italic"
+      >
+        A social impact professional with over a decade of experience in
+        fundraising, CSR partnerships, and donor engagement. I help
+        organisations to raise funds through CSR, institutional donors and
+        strategic partnerships, build clear fundraising strategies, strengthen
+        funder relationships, and raise funding for long-term impact. In past
+        one year I have raised over
+        <strong class="text-bottle-green not-italic">10Cr+</strong> of funds for
+        our partners.
       </p>
     </section>
 
@@ -164,45 +231,93 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
         >
-          <div
-            onclick="openModal('Fund Raising', 'Expertly crafted fundraising strategies designed to help NGOs secure sustainable funding.')"
-            class="bottle-green text-white p-8 rounded-xl shadow-lg cursor-pointer card-hover transition-all duration-300 square-card"
+          <a
+            href="services.html"
+            class="group relative rounded-xl shadow-lg overflow-hidden square-card card-hover transition-all duration-300"
           >
-            <h3 class="text-2xl font-bold mb-4">Fund Raising</h3>
-            <p class="text-green-200 text-sm">Read Details →</p>
-          </div>
-          <div
-            onclick="openModal('CSR Advising', 'Navigating CSR to create high-impact projects that align with corporate values.')"
-            class="bottle-green text-white p-8 rounded-xl shadow-lg cursor-pointer card-hover transition-all duration-300 square-card"
+            <img
+              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Fundraising"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300"
+            ></div>
+            <div class="relative z-10 p-8 text-center">
+              <h3 class="text-2xl font-bold text-white mb-4">Fund Raising</h3>
+              <p class="text-green-300 text-sm font-semibold">View Details →</p>
+            </div>
+          </a>
+
+          <a
+            href="services.html"
+            class="group relative rounded-xl shadow-lg overflow-hidden square-card card-hover transition-all duration-300"
           >
-            <h3 class="text-2xl font-bold mb-4">CSR Advising</h3>
-            <p class="text-green-200 text-sm">Read Details →</p>
-          </div>
-          <div
-            onclick="openModal('One-on-one Consultation', 'Tailored sessions for founders to refine their mission.')"
-            class="bottle-green text-white p-8 rounded-xl shadow-lg cursor-pointer card-hover transition-all duration-300 square-card"
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="CSR"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300"
+            ></div>
+            <div class="relative z-10 p-8 text-center">
+              <h3 class="text-2xl font-bold text-white mb-4">CSR Advisory</h3>
+              <p class="text-green-300 text-sm font-semibold">View Details →</p>
+            </div>
+          </a>
+
+          <a
+            href="services.html"
+            class="group relative rounded-xl shadow-lg overflow-hidden square-card card-hover transition-all duration-300"
           >
-            <h3 class="text-2xl font-bold mb-4">One-on-one Consultation</h3>
-            <p class="text-green-200 text-sm">Read Details →</p>
-          </div>
-          <div
-            onclick="openModal('LinkedIn Personal Branding', 'Build a professional identity that attracts collaborators.')"
-            class="bottle-green text-white p-8 rounded-xl shadow-lg cursor-pointer card-hover transition-all duration-300 square-card"
+            <img
+              src="https://images.unsplash.com/photo-1521791136364-798a7bc0d262?auto=format&fit=crop&q=80"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Consultation"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300"
+            ></div>
+            <div class="relative z-10 p-8 text-center">
+              <h3 class="text-2xl font-bold text-white mb-4">
+                1:1 Consultation
+              </h3>
+              <p class="text-green-300 text-sm font-semibold">View Details →</p>
+            </div>
+          </a>
+
+          <a
+            href="services.html"
+            class="group relative rounded-xl shadow-lg overflow-hidden square-card card-hover transition-all duration-300"
           >
-            <h3 class="text-2xl font-bold mb-4">LinkedIn Branding</h3>
-            <p class="text-green-200 text-sm">Read Details →</p>
-          </div>
+            <img
+              src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="LinkedIn"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300"
+            ></div>
+            <div class="relative z-10 p-8 text-center">
+              <h3 class="text-2xl font-bold text-white mb-4">
+                LinkedIn Personal Branding
+              </h3>
+              <p class="text-green-300 text-sm font-semibold">View Details →</p>
+            </div>
+          </a>
+
           <div
             class="bottle-green text-white p-8 rounded-xl shadow-lg card-hover transition-all duration-300 square-card"
           >
             <h3 class="text-2xl font-bold mb-4">Workshops</h3>
-            <p class="text-green-100 mb-8 text-sm opacity-90">
+            <p class="text-green-100 mb-8 text-sm opacity-90 text-center">
               Strategic learning for impact teams.
             </p>
             <a
               href="mailto:bhagyashree@saarthi.com"
-              class="sage-bg text-bottle-green px-6 py-3 rounded-lg font-bold hover:bg-[#d4e6d4] transition shadow-md w-full max-w-[200px]"
-              >Email Bhagyashree</a
+              class="sage-bg text-bottle-green px-6 py-3 rounded-lg font-bold hover:bg-[#d4e6d4] transition shadow-md w-full max-w-[200px] text-center"
+              >Email US</a
             >
           </div>
         </div>
@@ -322,4 +437,3 @@
     </script>
   </body>
 </html>
-
