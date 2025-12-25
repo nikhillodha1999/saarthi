@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Impact Meet | Saarthi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .bottle-green {
+        background-color: #004225;
+      }
+      .sage-bg {
+        background-color: #e8f3e8;
+      }
+      .text-bottle-green {
+        color: #004225;
+      }
+
+      #thumbContainer::-webkit-scrollbar {
+        height: 6px;
+      }
+      #thumbContainer::-webkit-scrollbar-thumb {
+        background: #004225;
+        border-radius: 10px;
+      }
+
+      .gallery-card:hover .overlay {
+        opacity: 1;
+      }
+      .gallery-card img {
+        transition: transform 0.5s ease;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="sage-bg font-sans text-gray-800">
+    <nav class="bottle-green text-white p-5 sticky top-0 z-50 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <a
+          href="index.html"
+          class="text-2xl font-bold font-serif tracking-widest"
+          >Bhagyashree Lodha- Saarthi</a
+        >
+        <div class="hidden md:flex space-x-8 font-medium">
+          <a href="index.html" class="hover:text-green-300 transition"
+            >About Us</a
+          >
+          <a href="services.html" class="hover:text-green-300 transition"
+            >Services</a
+          >
+          <a href="#footer" class="hover:text-green-300 transition"
+            >Consultation</a
+          >
+          <a href="#footer" class="hover:text-green-300 transition"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-20 bottle-green text-white text-center">
+      <h1 class="text-5xl font-bold mb-4">Social Impact Meet</h1>
+      <p class="text-green-200 text-lg max-w-2xl mx-auto px-6 italic">
+        Connecting change-makers across India.
+      </p>
+    </header>
+
+    <section class="py-16 container mx-auto px-6">
+      <div
+        class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-green-600 flex flex-col md:flex-row"
+      >
+        <div class="md:w-1/2 h-80 md:h-auto overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80"
+            class="w-full h-full object-cover"
+            alt="Upcoming Meetup"
+          />
+        </div>
+        <div class="md:w-1/2 p-10 flex flex-col justify-center">
+          <span
+            class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 w-fit"
+            >Next Event</span
+          >
+          <h2 class="text-3xl font-bold text-bottle-green mb-4">
+            Social Impact Meet - Hyderabad Edition
+          </h2>
+          <div class="space-y-3 mb-8 text-gray-600">
+            <p>📍 <strong>Venue:</strong> Hyderabad</p>
+            <p>⏰ <strong>Time:</strong> 4:00 PM - 7:00 PM</p>
+          </div>
+          <a
+            href="https://forms.google.com"
+            target="_blank"
+            class="bottle-green text-white text-center py-4 rounded-xl font-bold hover:bg-green-900 transition-all shadow-lg"
+          >
+            Register Now (Google Form)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-bottle-green text-center mb-4">
+        Our Journey So Far
+      </h2>
+      <p class="text-center text-gray-600 mb-12">
+        Explore the impact and highlights from our past city meetups.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Pune2/group.jpg"
+              class="w-full h-full object-cover"
+              alt="Pune 2.0"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">Pune 2.0</h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>80+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> Tata Trust, Infosys</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('pune2')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Ahemdabad/group.jpg"
+              class="w-full h-full object-cover"
+              alt="Ahmedabad"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">Ahmedabad</h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>80+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> Adani, Arvind Mills</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('ahmedabad')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Delhi/group.JPG"
+              class="w-full h-full object-cover"
+              alt="Delhi"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">Delhi</h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>120+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> HCL, Gates Foundation</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('delhi')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Bangalore/group.jpg"
+              class="w-full h-full object-cover"
+              alt="Bangalore"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">Bangalore</h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>100+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> Wipro, Microsoft</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('bangalore')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Mumbai/group.JPG"
+              class="w-full h-full object-cover"
+              alt="Mumbai"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">Mumbai</h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>80+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> Reliance, Mahindra</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('mumbai')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="img/Pune/group.jpg"
+              class="w-full h-full object-cover"
+              alt="Pune"
+            />
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-2xl font-bold text-bottle-green mb-3">
+              Pune (Inaugural)
+            </h3>
+            <div class="space-y-2 text-sm text-gray-600 mb-6">
+              <p class="flex items-center">
+                👥 <span class="ml-2"><strong>90+ Registered</strong></span>
+              </p>
+              <p class="flex items-center">
+                🏢
+                <span class="ml-2"
+                  ><strong>Top Companies:</strong> Persistent, Forbes
+                  Marshall</span
+                >
+              </p>
+            </div>
+            <button
+              onclick="openGallery('pune')"
+              class="mt-auto w-full border-2 border-bottle-green text-bottle-green font-bold py-2 rounded-lg hover:bg-bottle-green hover:text-white transition-colors duration-300"
+            >
+              View Photos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="galleryModal"
+      class="fixed inset-0 z-[100] hidden bg-black/95 flex-col items-center justify-center p-4"
+    >
+      <button
+        onclick="closeGallery()"
+        class="absolute top-6 right-6 text-white text-5xl"
+      >
+        &times;
+      </button>
+      <h3 id="galleryTitle" class="text-white text-2xl font-bold mb-6"></h3>
+      <div
+        class="relative max-w-5xl w-full h-[65vh] flex items-center justify-between"
+      >
+        <button
+          onclick="prevImg()"
+          class="text-white text-6xl px-4 hover:text-green-400"
+        >
+          ‹
+        </button>
+        <img
+          id="mainImg"
+          src=""
+          class="max-w-full max-h-full rounded-lg shadow-2xl object-contain"
+        />
+        <button
+          onclick="nextImg()"
+          class="text-white text-6xl px-4 hover:text-green-400"
+        >
+          ›
+        </button>
+      </div>
+      <div
+        id="thumbContainer"
+        class="flex gap-3 mt-10 overflow-x-auto max-w-full p-2"
+      ></div>
+    </div>
+
+    <footer id="footer" class="bottle-green text-green-100 py-24 px-6">
+      <div class="container mx-auto grid md:grid-cols-4 gap-12 text-left">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-6">SAARTHI</h2>
+          <p class="text-sm opacity-70 leading-relaxed">
+            Your guide in the journey of social transformation.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 border-b border-green-700 pb-2"
+          >
+            Company
+          </h4>
+          <p class="text-sm opacity-70">
+            Empowering impact-driven ventures through strategic advisory.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 border-b border-green-700 pb-2"
+          >
+            Services
+          </h4>
+          <ul class="text-sm space-y-3 opacity-70">
+            <li>Fund Raising</li>
+            <li>CSR Advising</li>
+            <li>Consultation</li>
+            <li>LinkedIn Branding</li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 border-b border-green-700 pb-2"
+          >
+            Connect
+          </h4>
+          <div class="text-sm space-y-3 opacity-70">
+            <p>📍 Mumbai, India</p>
+            <p>📧 bhagyashree@saarthi.com</p>
+            <p>📸 @saarthi_impact</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const eventData = {
+        pune2: {
+          title: "Pune 2.0 Photos",
+          images: [
+            "img/Pune2/group.jpg",
+            "img/Pune2/IMG_1908.jpg",
+            "img/Pune2/IMG_1917.jpg",
+            "img/Pune2/IMG_1949.jpg",
+            "img/Pune2/IMG_1954.jpg",
+            "img/Pune2/IMG_1957.jpg",
+            "img/Pune2/IMG_1962.jpg",
+          ],
+        },
+        ahmedabad: {
+          title: "Ahmedabad Photos",
+          images: [
+            "img/Ahemdabad/group.jpg",
+            "img/Ahemdabad/IMG_1345.jpg",
+            "img/Ahemdabad/IMG_1348.jpg",
+            "img/Ahemdabad/IMG_1353.jpg",
+            "img/Ahemdabad/IMG_1357.jpg",
+            "img/Ahemdabad/IMG_1365.jpg",
+            "img/Ahemdabad/IMG_1405.jpg",
+          ],
+        },
+        delhi: {
+          title: "Delhi Photos",
+          images: [
+            "img/Delhi/group.jpg",
+            "img/Delhi/IMG_7952.jpg",
+            "img/Delhi/IMG_7970.jpg",
+            "img/Delhi/IMG_7999.jpg",
+            "img/Delhi/IMG_8004.jpg",
+            "img/Delhi/IMG_8091.jpg",
+          ],
+        },
+        bangalore: {
+          title: "Bangalore Photos",
+          images: [
+            "img/Bangalore/group.jpg",
+            "img/Bangalore/group1.jpg",
+            "img/Bangalore/IMG_7199.jpg",
+            "img/Bangalore/IMG_7205.jpg",
+            "img/Bangalore/IMG_7228.jpg",
+            "img/Bangalore/IMG_7242.jpg",
+            "img/Bangalore/IMG_7282.jpg",
+            "img/Bangalore/IMG_7284.jpg",
+          ],
+        },
+        mumbai: {
+          title: "Mumbai Photos",
+          images: [
+            "img/Mumbai/group.jpg",
+            "img/Mumbai/IMG_6004.jpg",
+            "img/Mumbai/IMG_6043.jpg",
+            "img/Mumbai/IMG_6061.jpg",
+            "img/Mumbai/IMG_6066.jpg",
+            "img/Mumbai/IMG_6077.jpg",
+            "img/Mumbai/IMG_6080.jpg",
+          ],
+        },
+        pune: {
+          title: "Pune Inaugural Photos",
+          images: [
+            "img/Pune/group.jpg",
+            "img/Pune/IMG_4273.jpg",
+            "img/Pune/IMG_4336.jpg",
+            "img/Pune/IMG_4345.jpg",
+            "img/Pune/IMG_4352.jpg",
+          ],
+        },
+      };
+
+      let currentKey = "";
+      let currentIdx = 0;
+
+      function openGallery(key) {
+        currentKey = key;
+        currentIdx = 0;
+        document.getElementById("galleryTitle").innerText =
+          eventData[key].title;
+        const container = document.getElementById("thumbContainer");
+        container.innerHTML = "";
+        eventData[key].images.forEach((url, i) => {
+          const img = document.createElement("img");
+          img.src = url + "?auto=format&fit=crop&w=150&q=80";
+          img.className = `h-20 w-32 object-cover rounded-md cursor-pointer border-2 transition ${
+            i === 0 ? "border-green-500" : "border-transparent"
+          }`;
+          img.onclick = (e) => {
+            e.stopPropagation();
+            currentIdx = i;
+            updateView();
+          };
+          container.appendChild(img);
+        });
+        updateView();
+        document.getElementById("galleryModal").classList.remove("hidden");
+        document.getElementById("galleryModal").classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function updateView() {
+        document.getElementById("mainImg").src =
+          eventData[currentKey].images[currentIdx] +
+          "?auto=format&fit=crop&w=1200&q=90";
+        const thumbs = document
+          .getElementById("thumbContainer")
+          .querySelectorAll("img");
+        thumbs.forEach((t, i) =>
+          t.classList.toggle("border-green-500", i === currentIdx)
+        );
+      }
+
+      function closeGallery() {
+        document.getElementById("galleryModal").classList.add("hidden");
+        document.getElementById("galleryModal").classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }
+
+      function nextImg() {
+        currentIdx = (currentIdx + 1) % eventData[currentKey].images.length;
+        updateView();
+      }
+      function prevImg() {
+        currentIdx =
+          (currentIdx - 1 + eventData[currentKey].images.length) %
+          eventData[currentKey].images.length;
+        updateView();
+      }
+
+      document.getElementById("galleryModal").onclick = function (e) {
+        if (e.target === this) closeGallery();
+      };
+    </script>
+  </body>
+</html>
