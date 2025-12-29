@@ -4,48 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services | Saarthi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+            },
+            colors: {
+              "saarthi-teal": "#0f413e",
+            },
+          },
+        },
+      };
+    </script>
     <style>
       html {
         scroll-behavior: smooth;
       }
-      .bottle-green {
-        background-color: #004225;
+      .bg-saarthi-teal {
+        background-color: #0f413e;
       }
       .sage-bg {
         background-color: #e8f3e8;
       }
-      .text-bottle-green {
-        color: #004225;
+      .text-saarthi-teal {
+        color: #0f413e;
+      }
+      .border-saarthi-teal {
+        border-color: #0f413e;
       }
     </style>
   </head>
   <body class="sage-bg font-sans text-gray-800">
-    <nav class="bottle-green text-white p-5 sticky top-0 z-50 shadow-lg">
+    <nav class="bg-saarthi-teal text-white p-5 sticky top-0 z-50 shadow-lg">
       <div class="container mx-auto flex justify-between items-center">
-        <a
-          href="index.html"
-          class="text-2xl font-bold font-serif tracking-widest"
+        <a href="index.html" class="text-2xl font-bold tracking-widest"
           >Bhagyashree Lodha- Saarthi</a
         >
         <div class="hidden md:flex space-x-8 font-medium">
           <a href="index.html" class="hover:text-green-300 transition"
             >About Us</a
           >
-          <a href="services.html" class="hover:text-green-300 transition"
+          <a
+            href="services.html"
+            class="hover:text-green-300 transition underline underline-offset-8"
             >Services</a
           >
-          <a href="#footer" class="hover:text-green-300 transition"
+          <a href="index.html#footer" class="hover:text-green-300 transition"
             >Consultation</a
           >
-          <a href="#footer" class="hover:text-green-300 transition"
+          <a href="index.html#footer" class="hover:text-green-300 transition"
             >Contact Us</a
           >
         </div>
       </div>
     </nav>
 
-    <header class="py-20 bottle-green text-white text-center">
+    <header class="py-20 bg-saarthi-teal text-white text-center">
       <h1 class="text-5xl font-bold mb-4">Our Services</h1>
       <p class="text-green-200 text-lg max-w-2xl mx-auto px-6 italic">
         "Tailored strategies to bridge the gap between intent and impact."
@@ -59,44 +80,39 @@
             class="text-sm font-bold tracking-widest text-green-700 uppercase"
             >Strategic Growth</span
           >
-          <h2 class="text-4xl font-bold text-bottle-green mt-2 mb-6">
+          <h2 class="text-4xl font-bold text-saarthi-teal mt-2 mb-6">
             Fund Raising Strategy
           </h2>
           <p class="text-lg leading-relaxed mb-6 text-gray-700">
             We work as an extended fundraising arm for your organisation, taking
             ownership of end-to-end fundraising execution. From identifying and
-            reaching out to the right CSR, foundation, institutional, and
-            individual donors to proposals, follow-ups, due diligence, and fund
-            closure, we support the entire fundraising cycle. Our focus is on
-            building a strong pipeline and converting opportunities into
-            committed funding.
+            reaching out to the right CSR, foundation, and institutional donors
+            to proposals and due diligence, we support the entire fundraising
+            cycle.
           </p>
-          <ul class="grid grid-cols-1 gap-3 font-semibold text-bottle-green">
+          <ul
+            class="grid grid-cols-1 gap-3 font-semibold text-saarthi-teal mb-6"
+          >
             <li class="flex items-center">
               ✨ Fundraising & Donor Identification
             </li>
             <li class="flex items-center">✨ Lead Generation & Outreach</li>
             <li class="flex items-center">✨ Proposal & Pitch Support</li>
-            <li class="flex items-center">
-              ✨ Ongoing Fundraising Support, like due diligence, documentation
-              etc.
-            </li>
+            <li class="flex items-center">✨ Ongoing Due Diligence Support</li>
           </ul>
-          <br />
-          <p class="text-lg leading-relaxed mb-6 text-gray-700">
-            <b>It’s beneficial for-</b> Think of it as an extended arm of your
-            fundraising team. This will be helpful for organisation who can’t
-            afford a full-time experienced fundraising professional or someone
-            who wants to up their fundraising game. So if you also believe that
-            fundraising is a long game and not one time shot and also if you are
-            seeking help. Write to me at bl@saarthi.com
+          <p
+            class="text-md bg-white p-4 rounded-xl border-l-4 border-saarthi-teal italic"
+          >
+            <strong>Beneficial for:</strong> Organisations who can’t afford a
+            full-time experienced fundraising professional but want to up their
+            fundraising game.
           </p>
         </div>
         <div class="md:w-1/2 h-80 rounded-3xl overflow-hidden shadow-2xl">
           <img
             src="img/Fund-Raising.jpg"
             class="w-full h-full object-cover"
-            alt="Fundraising Management"
+            alt="Fundraising"
           />
         </div>
       </div>
@@ -107,31 +123,28 @@
             class="text-sm font-bold tracking-widest text-green-700 uppercase"
             >Corporate Impact</span
           >
-          <h2 class="text-4xl font-bold text-bottle-green mt-2 mb-6">
+          <h2 class="text-4xl font-bold text-saarthi-teal mt-2 mb-6">
             CSR Advisory
           </h2>
           <p class="text-lg leading-relaxed mb-6 text-gray-700">
             We help corporates identify, evaluate, and engage the right NGO
-            implementation partners for their CSR initiatives. Our support spans
-            partner discovery, compliance and due diligence checks, and
-            assessment against corporate CSR objectives and statutory
-            requirements under the Companies Act. We also evaluate NGOs’
-            on-ground capabilities, governance, and reporting readiness to
-            ensure partnerships are credible, compliant, and capable of
-            delivering measurable, outcome-driven impact.
-            <br />
-            <b>It’s beneficial for-</b> It will be helpful for those who are
-            just just falling into the CSR mandate and dont have an inhouse
-            expert. <br /><br />
-            For those who dont want to burden your team with CSR and are looking
-            for an expert to take care of end to end CSR implementation
+            implementation partners. Our support spans partner discovery,
+            compliance checks, and assessment against corporate CSR objectives
+            and statutory requirements under the Companies Act.
+          </p>
+          <p
+            class="text-md bg-white p-4 rounded-xl border-l-4 border-saarthi-teal italic"
+          >
+            <strong>Beneficial for:</strong> Companies newly falling into the
+            CSR mandate or those looking for an expert to take care of
+            end-to-end CSR implementation.
           </p>
         </div>
         <div class="md:w-1/2 h-80 rounded-3xl overflow-hidden shadow-2xl">
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
             class="w-full h-full object-cover"
-            alt="Corporate Social Responsibility Planning"
+            alt="CSR Advisory"
           />
         </div>
       </div>
@@ -142,42 +155,28 @@
             class="text-sm font-bold tracking-widest text-green-700 uppercase"
             >Personalized Coaching</span
           >
-          <h2 class="text-4xl font-bold text-bottle-green mt-2 mb-6">
+          <h2 class="text-4xl font-bold text-saarthi-teal mt-2 mb-6">
             1:1 Consultation
           </h2>
           <p class="text-lg leading-relaxed mb-6 text-gray-700">
-            I offer one-on-one consultations for social sector professionals,
-            fundraisers, and founders seeking clarity and direction. These
-            sessions are designed to help you unblock challenges- whether you’re
-            stuck with fundraising progress, unsure how to approach CSR donors,
-            struggling to convert donor conversations, or navigating a career
-            transition within the social impact space. Together, we identify
-            gaps, stress-test your current approach, and outline practical,
-            experience-backed next steps you can implement immediately.
+            I offer one-on-one sessions for social sector professionals and
+            founders seeking clarity. Together, we identify gaps, stress-test
+            your current approach, and outline practical next steps you can
+            implement immediately.
           </p>
-
-          <b>It’s beneficial for-</b>
-          <ul class="grid grid-cols-1 gap-3 font-semibold text-bottle-green">
+          <ul class="grid grid-cols-1 gap-3 font-semibold text-saarthi-teal">
+            <li class="flex items-center">✨ Sector landscape clarity</li>
             <li class="flex items-center">
-              ✨ Someone who is confused what’s happening in the sector
+              ✨ Fundraising strategy challenges
             </li>
-            <li class="flex items-center">
-              ✨ Someone who wants to understand the social sector better
-            </li>
-            <li class="flex items-center">
-              ✨ Someone who wants to leverage the space at best
-            </li>
-            <li class="flex items-center">
-              ✨ Someone who is facing challenges in addressing their
-              fundraising strategy
-            </li>
+            <li class="flex items-center">✨ Levering the space for growth</li>
           </ul>
         </div>
         <div class="md:w-1/2 h-80 rounded-3xl overflow-hidden shadow-2xl">
           <img
             src="img/1-1Consultation.png"
             class="w-full h-full object-cover"
-            alt="One-on-one business consultation"
+            alt="Consultation"
           />
         </div>
       </div>
@@ -188,16 +187,16 @@
             class="text-sm font-bold tracking-widest text-green-700 uppercase"
             >Digital Presence</span
           >
-          <h2 class="text-4xl font-bold text-bottle-green mt-2 mb-6">
+          <h2 class="text-4xl font-bold text-saarthi-teal mt-2 mb-6">
             LinkedIn Personal Branding
           </h2>
           <p class="text-lg leading-relaxed mb-6 text-gray-700">
             Your personal brand is your most powerful tool for social impact. We
-            help you articulate your journey, share your insights, and build a
-            community of supporters and collaborators on the world's largest
-            professional network.
+            help you articulate your journey, share insights, and build a
+            community of collaborators on the world's largest professional
+            network.
           </p>
-          <ul class="grid grid-cols-1 gap-3 font-semibold text-bottle-green">
+          <ul class="grid grid-cols-1 gap-3 font-semibold text-saarthi-teal">
             <li class="flex items-center">
               ✨ Thought Leadership Content Strategy
             </li>
@@ -211,17 +210,17 @@
           <img
             src="img/linkedin personal branding.png"
             class="w-full h-full object-cover"
-            alt="LinkedIn Branding and Networking"
+            alt="LinkedIn Branding"
           />
         </div>
       </div>
     </section>
 
-    <footer id="footer" class="bottle-green text-green-100 py-24 px-6">
+    <footer id="footer" class="bg-saarthi-teal text-green-100 py-24 px-6">
       <div class="container mx-auto grid md:grid-cols-4 gap-12 text-left">
         <div>
           <h2 class="text-3xl font-bold text-white mb-6">SAARTHI</h2>
-          <p class="text-sm opacity-70 leading-relaxed">
+          <p class="text-sm opacity-70">
             Your guide in the journey of social transformation.
           </p>
         </div>

@@ -4,27 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saarthi | Bhagyashree Lodha</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              // Setting Poppins as the primary font
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <style>
       html {
         scroll-behavior: smooth;
       }
 
-      /* Custom Palette */
-      .bottle-green {
-        background-color: #004225;
+      /* Updated Palette to #0f413e */
+      .bg-custom-teal {
+        background-color: #0f413e;
       }
       .sage-bg {
         background-color: #e8f3e8;
       }
-      .text-bottle-green {
-        color: #004225;
+      .text-custom-teal {
+        color: #0f413e;
       }
       .hero-overlay {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.3);
       }
 
-      /* This CSS creates the "Big Quotes" effect using only the p tag */
       .hero-quote {
         position: relative;
         padding: 0 40px;
@@ -35,9 +54,8 @@
         left: -10px;
         top: -20px;
         font-size: 80px;
-        color: #004225; /* Bottle Green */
+        color: #0f413e;
         opacity: 0.2;
-        font-family: serif;
       }
       .hero-quote::after {
         content: "”";
@@ -45,12 +63,10 @@
         right: -10px;
         bottom: -50px;
         font-size: 80px;
-        color: #004225;
+        color: #0f413e;
         opacity: 0.2;
-        font-family: serif;
       }
 
-      /* Square Card Logic */
       .square-card {
         aspect-ratio: 1 / 1;
         display: flex;
@@ -60,52 +76,11 @@
         text-align: center;
       }
 
-      /* Modal Animation */
-      .modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 100;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-      .modal.active {
-        display: flex;
-        animation: popupScale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      @keyframes popupScale {
-        from {
-          transform: scale(0.7);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
       .card-hover:hover {
         transform: translateY(-10px);
-        box-shadow: 0 25px 30px -5px rgba(0, 66, 37, 0.2);
+        box-shadow: 0 25px 30px -5px rgba(15, 65, 62, 0.2);
       }
 
-      /* Floating LinkedIn Button Animation */
-      .floating-linkedin {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 1000;
-      }
-
-      /* YouTube Brand Color */
-      .bg-youtube {
-        background-color: #ff0000;
-      }
-
-      /* Container for stacking floating buttons */
       .floating-container {
         position: fixed;
         bottom: 30px;
@@ -113,11 +88,14 @@
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        gap: 15px; /* Space between the buttons */
+        gap: 15px;
+      }
+      .bg-youtube {
+        background-color: #ff0000;
       }
     </style>
   </head>
-  <body class="sage-bg font-sans text-gray-800">
+  <body class="sage-bg font-sans text-gray-800 antialiased">
     <div class="floating-container">
       <div class="relative group">
         <a
@@ -132,7 +110,6 @@
           </svg>
         </a>
       </div>
-
       <div class="relative group">
         <span
           class="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping"
@@ -151,13 +128,13 @@
       </div>
     </div>
 
-    <nav class="bottle-green text-white p-5 sticky top-0 z-50 shadow-lg">
+    <nav class="bg-custom-teal text-white p-5 sticky top-0 z-50 shadow-lg">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold font-serif tracking-widest">
-          Bhagyashree Lodha- Saarthi
+        <div class="text-2xl font-bold tracking-tight">
+          Bhagyashree Lodha - Saarthi
         </div>
         <div class="hidden md:flex space-x-8 font-medium">
-          <a href="#about" class="hover:text-green-300 transition">About Us</a>
+          <a href="#about" class="hover:text-green-300 transition">About us</a>
           <a href="services.html" class="hover:text-green-300 transition"
             >Services</a
           >
@@ -165,7 +142,7 @@
             >Consultation</a
           >
           <a href="#footer" class="hover:text-green-300 transition"
-            >Contact Us</a
+            >Contact us</a
           >
         </div>
       </div>
@@ -180,9 +157,9 @@
       >
         <div class="text-white max-w-3xl">
           <h1
-            class="text-4xl md:text-5xl italic font-serif mb-8 leading-tight border-l-4 border-green-500 pl-6"
+            class="text-4xl md:text-5xl font-bold mb-8 leading-tight border-l-4 border-teal-700 pl-6"
           >
-            "Your Saarthi to create impactful social change "
+            <i>"Your Saarthi to create impactful social change"</i>
           </h1>
           <a
             href="https://linkedin.com/in/bhagyashreelodha"
@@ -201,29 +178,28 @@
     </header>
 
     <section id="about" class="py-24 container mx-auto px-6 text-center">
-      <h2
-        class="text-4xl font-bold mb-10 text-bottle-green uppercase tracking-widest"
-      >
+      <h2 class="text-4xl font-bold mb-10 text-custom-teal tracking-tight">
         Bhagyashree Lodha
       </h2>
-
       <p
-        class="hero-quote text-xl md:text-2xl text-gray-700 max-w-8xl mx-auto leading-relaxed italic"
+        class="text-xl md:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed italic font-light"
       >
         A social impact professional with over a decade of experience in
         fundraising, CSR partnerships, and donor engagement. I help
         organisations to raise funds through CSR, institutional donors and
         strategic partnerships, build clear fundraising strategies, strengthen
-        funder relationships, and raise funding for long-term impact. In past
+        funder relationships, and raise funding for long-term impact.
+        <br> In past
         one year I have raised over
-        <strong class="text-bottle-green not-italic">10Cr+</strong> of funds for
-        our partners.
+        <strong class="text-custom-teal not-italic font-bold">10Cr+</strong> of
+        funds for our partners.
+    </br>
       </p>
     </section>
 
     <section id="services" class="py-20 px-6 bg-white">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-16 text-center text-bottle-green">
+        <h2 class="text-3xl font-bold mb-16 text-center text-custom-teal">
           What Saarthi Does
         </h2>
         <div
@@ -243,7 +219,9 @@
             ></div>
             <div class="relative z-10 p-8 text-center">
               <h3 class="text-2xl font-bold text-white mb-4">Fund Raising</h3>
-              <p class="text-green-300 text-sm font-semibold">View Details →</p>
+              <p class="text-emerald-400 text-sm font-semibold">
+                View Details →
+              </p>
             </div>
           </a>
 
@@ -306,7 +284,7 @@
           </a>
 
           <div
-            class="bottle-green text-white p-8 rounded-xl shadow-lg card-hover transition-all duration-300 square-card"
+            class="bg-custom-teal text-white p-8 rounded-xl shadow-lg card-hover transition-all duration-300 square-card"
           >
             <h3 class="text-2xl font-bold mb-4">Workshops</h3>
             <p class="text-green-100 mb-8 text-sm opacity-90 text-center">
@@ -314,7 +292,7 @@
             </p>
             <a
               href="mailto:bhagyashree@saarthi.com"
-              class="sage-bg text-bottle-green px-6 py-3 rounded-lg font-bold hover:bg-[#d4e6d4] transition shadow-md w-full max-w-[200px] text-center"
+              class="sage-bg text-custom-teal px-6 py-3 rounded-lg font-bold hover:bg-[#d4e6d4] transition shadow-md w-full max-w-[200px] text-center"
               >Email us</a
             >
           </div>
@@ -323,7 +301,7 @@
     </section>
 
     <section class="py-24 px-6 container mx-auto">
-      <h2 class="text-3xl font-bold mb-12 text-center text-bottle-green">
+      <h2 class="text-3xl font-bold mb-12 text-center text-custom-teal">
         Other Activities
       </h2>
       <div
@@ -389,11 +367,11 @@
       </div>
     </section>
 
-    <footer id="footer" class="bottle-green text-green-100 py-24 px-6">
+    <footer id="footer" class="bg-custom-teal text-green-100 py-24 px-6">
       <div class="container mx-auto grid md:grid-cols-4 gap-12 text-left">
         <div>
           <h2 class="text-3xl font-bold text-white mb-6">SAARTHI</h2>
-          <p class="text-sm opacity-70 leading-relaxed">
+          <p class="text-sm opacity-70 leading-relaxed font-light">
             Your guide in the journey of social transformation.
           </p>
         </div>
@@ -403,7 +381,7 @@
           >
             Company
           </h4>
-          <p class="text-sm opacity-70">
+          <p class="text-sm opacity-70 font-light">
             Empowering impact-driven ventures through strategic advisory.
           </p>
         </div>
@@ -413,7 +391,7 @@
           >
             Services
           </h4>
-          <ul class="text-sm space-y-3 opacity-70">
+          <ul class="text-sm space-y-3 opacity-70 font-light">
             <li>Fund Raising</li>
             <li>CSR Advising</li>
             <li>Consultation</li>
@@ -426,7 +404,7 @@
           >
             Connect
           </h4>
-          <div class="text-sm space-y-3 opacity-70">
+          <div class="text-sm space-y-3 opacity-70 font-light">
             <p>📍 Mumbai, India</p>
             <p>📧 bhagyashree@saarthi.com</p>
             <p>📸 @saarthi_impact</p>
@@ -434,40 +412,5 @@
         </div>
       </div>
     </footer>
-
-    <div id="serviceModal" class="modal" onclick="closeModal()">
-      <div
-        class="sage-bg p-12 rounded-2xl max-w-xl w-full text-center relative shadow-2xl border-2 border-green-800"
-        onclick="event.stopPropagation()"
-      >
-        <h2
-          id="modalTitle"
-          class="text-3xl font-bold text-bottle-green mb-6"
-        ></h2>
-        <p
-          id="modalDesc"
-          class="text-gray-700 text-lg mb-10 leading-relaxed italic"
-        ></p>
-        <button
-          onclick="closeModal()"
-          class="bottle-green text-white px-12 py-3 rounded-full font-bold"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-
-    <script>
-      function openModal(title, desc) {
-        document.getElementById("modalTitle").innerText = title;
-        document.getElementById("modalDesc").innerText = desc;
-        document.getElementById("serviceModal").classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-      function closeModal() {
-        document.getElementById("serviceModal").classList.remove("active");
-        document.body.style.overflow = "auto";
-      }
-    </script>
   </body>
 </html>
